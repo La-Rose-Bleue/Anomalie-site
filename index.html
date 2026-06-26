@@ -1,22 +1,131 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anomalie : Le Secret de la Rose Bleue</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anomalie : Le Secret de la Rose Bleue</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at center, #08245c, #02040a 70%);
+      color: white;
+      font-family: Georgia, serif;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+      position: relative;
+    }
+
+    .glow {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      background: #006eff;
+      filter: blur(120px);
+      opacity: 0.35;
+      border-radius: 50%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .rose {
+      font-size: 70px;
+      animation: pulse 3s infinite;
+    }
+
+    h1 {
+      font-size: 64px;
+      margin: 20px 0 5px;
+      letter-spacing: 8px;
+      text-shadow: 0 0 25px #2f8cff;
+    }
+
+    h2 {
+      font-weight: normal;
+      color: #8fc8ff;
+      letter-spacing: 3px;
+      margin-bottom: 35px;
+    }
+
+    p {
+      font-size: 22px;
+      color: #dcecff;
+      margin-bottom: 40px;
+    }
+
+    button {
+      padding: 18px 35px;
+      font-size: 20px;
+      color: white;
+      background: linear-gradient(90deg, #082d6b, #0f6fff);
+      border: 1px solid #7fc8ff;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 25px #006eff;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .petal {
+      position: fixed;
+      top: -50px;
+      color: #3aa7ff;
+      font-size: 25px;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px #008cff); }
+      50% { transform: scale(1.15); filter: drop-shadow(0 0 30px #00b7ff); }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+  </style>
 </head>
 
-<body style="background:black; color:white; text-align:center; font-family:Arial;">
+<body>
+  <div class="hero">
+    <div class="glow"></div>
 
-    <h1>🌹 ANOMALIE</h1>
+    <div class="content">
+      <div class="rose">🌹</div>
+      <h1>ANOMALIE</h1>
+      <h2>Le Secret de la Rose Bleue</h2>
+      <p>« Une rose continue de briller... »</p>
+      <button>Entrer dans l'univers</button>
+    </div>
+  </div>
 
-    <h2>Le Secret de la Rose Bleue</h2>
-
-    <p>Une rose continue de briller...</p>
-
-    <button style="padding:20px; font-size:22px;">
-        Entrer dans l'univers
-    </button>
-
+  <script>
+    for (let i = 0; i < 25; i++) {
+      const petal = document.createElement("div");
+      petal.className = "petal";
+      petal.innerHTML = "❖";
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDuration = 5 + Math.random() * 8 + "s";
+      petal.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(petal);
+    }
+  </script>
 </body>
 </html>
