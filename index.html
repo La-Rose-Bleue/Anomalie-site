@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anomalie : Le Secret de la Rose Bleue</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -27,186 +24,211 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 40px;
-      background: rgba(1, 4, 15, 0.75);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(80, 170, 255, 0.4);
+      padding: 18px 45px;
+      background: rgba(1, 4, 15, 0.85);
+      border-bottom: 1px solid rgba(90, 180, 255, 0.4);
+      backdrop-filter: blur(12px);
     }
 
     .nav-logo {
-      font-size: 22px;
-      letter-spacing: 4px;
-      color: #b9ddff;
-      text-shadow: 0 0 12px #2f8cff;
+      letter-spacing: 5px;
+      font-size: 24px;
       font-weight: bold;
+      color: #d9efff;
+      text-shadow: 0 0 18px #008cff;
     }
 
-    .nav-links a {
-      color: #dcecff;
+    nav a {
+      color: #e6f3ff;
       text-decoration: none;
-      margin-left: 22px;
+      margin-left: 24px;
       font-size: 15px;
-      transition: 0.3s;
     }
 
-    .nav-links a:hover {
-      color: #6bbcff;
-      text-shadow: 0 0 10px #2f8cff;
+    nav a:hover {
+      color: #6fc6ff;
+      text-shadow: 0 0 10px #008cff;
     }
 
     .hero {
       min-height: 100vh;
-      background: radial-gradient(circle at center, #0b3a8f, #02040a 70%);
+      padding: 110px 25px 50px;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 90px 30px 30px;
       position: relative;
+      background:
+        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.85)),
+        radial-gradient(circle at center, #0b4dba 0%, #061735 45%, #010208 100%);
+      overflow: hidden;
     }
 
-    .glow {
+    .hero::before {
+      content: "";
       position: absolute;
-      width: 450px;
-      height: 450px;
-      background: #006eff;
-      filter: blur(130px);
-      opacity: 0.35;
-      border-radius: 50%;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(0,130,255,.25), transparent 35%),
+        radial-gradient(circle at 80% 20%, rgba(0,200,255,.18), transparent 30%);
+      animation: breathe 8s infinite alternate;
     }
 
     .content {
       position: relative;
       z-index: 2;
-      max-width: 850px;
+      max-width: 900px;
     }
 
-    .rose {
-      font-size: 72px;
-      animation: pulse 3s infinite;
+    .main-logo {
+      width: 520px;
+      max-width: 92%;
+      border-radius: 18px;
+      box-shadow: 0 0 45px #008cff;
+      animation: logoFloat 5s infinite ease-in-out;
+      margin-bottom: 25px;
     }
 
     h1 {
-      font-size: 64px;
-      margin: 20px 0 5px;
-      letter-spacing: 8px;
-      text-shadow: 0 0 25px #2f8cff;
+      font-size: 62px;
+      letter-spacing: 10px;
+      margin: 15px 0 5px;
+      text-shadow: 0 0 25px #3aa7ff;
     }
 
     h2 {
       font-weight: normal;
-      color: #8fc8ff;
-      letter-spacing: 3px;
-      margin-bottom: 35px;
+      color: #b8ddff;
+      letter-spacing: 4px;
+      margin-bottom: 30px;
     }
 
     .quote {
-      font-size: 22px;
-      color: #dcecff;
-      margin-bottom: 40px;
+      font-size: 23px;
+      color: #e8f5ff;
+      margin-bottom: 35px;
     }
 
     .button {
       display: inline-block;
-      padding: 18px 35px;
-      font-size: 20px;
+      padding: 18px 42px;
       color: white;
       text-decoration: none;
-      background: linear-gradient(90deg, #082d6b, #0f6fff);
-      border: 1px solid #7fc8ff;
-      border-radius: 8px;
-      box-shadow: 0 0 25px #006eff;
-      transition: 0.3s;
+      border: 1px solid #7fd4ff;
+      background: linear-gradient(90deg, #061b45, #0c63d8);
+      border-radius: 6px;
+      box-shadow: 0 0 28px #007bff;
+      letter-spacing: 1px;
+      transition: .3s;
     }
 
     .button:hover {
-      transform: scale(1.05);
+      transform: scale(1.06);
+      box-shadow: 0 0 45px #00aaff;
     }
 
     .petal {
       position: fixed;
-      top: -50px;
-      color: #3aa7ff;
-      font-size: 25px;
-      animation: fall linear infinite;
-      opacity: 0.8;
+      top: -60px;
+      width: 18px;
+      height: 28px;
+      background: radial-gradient(circle at 30% 30%, #9be8ff, #0879ff 70%);
+      border-radius: 80% 20% 80% 20%;
+      opacity: .75;
       z-index: 10;
       pointer-events: none;
+      animation: fall linear infinite;
+      filter: drop-shadow(0 0 8px #00aaff);
     }
 
     .main {
-      padding: 90px 25px;
-      background: linear-gradient(#02040a, #07142d);
+      padding: 90px 35px;
+      background: linear-gradient(#010208, #06122b);
       text-align: center;
     }
 
     .main h2 {
-      font-size: 38px;
-      color: #b9ddff;
-      margin-bottom: 20px;
+      font-size: 42px;
+      color: #d9efff;
+      text-shadow: 0 0 16px #006eff;
     }
 
     .intro {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 auto 60px;
       font-size: 20px;
-      line-height: 1.7;
-      color: #d6e8ff;
+      line-height: 1.8;
+      color: #dcecff;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 26px;
+      max-width: 1150px;
       margin: auto;
     }
 
     .card {
-      background: rgba(8, 35, 85, 0.55);
-      border: 1px solid #2f8cff;
+      padding: 32px 25px;
+      min-height: 230px;
+      background: linear-gradient(rgba(5,25,65,.85), rgba(1,5,20,.9));
+      border: 1px solid rgba(110,200,255,.65);
       border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 0 25px rgba(0, 110, 255, 0.25);
-      min-height: 210px;
+      box-shadow: 0 0 25px rgba(0,120,255,.25);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 45px rgba(0,150,255,.45);
     }
 
     .card h3 {
-      color: #8fc8ff;
-      font-size: 24px;
-      margin-bottom: 15px;
+      font-size: 25px;
+      color: #9dd8ff;
     }
 
     .card p {
-      color: #dcecff;
-      line-height: 1.5;
+      color: #e2f1ff;
+      line-height: 1.6;
     }
 
     footer {
-      padding: 30px;
+      padding: 35px;
       text-align: center;
       background: #010208;
       color: #8fc8ff;
       border-top: 1px solid #0f6fff;
+      letter-spacing: 2px;
     }
 
-    @media (max-width: 750px) {
+    @keyframes fall {
+      to {
+        transform: translateY(115vh) rotate(720deg);
+      }
+    }
+
+    @keyframes logoFloat {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes breathe {
+      from { opacity: .5; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 800px) {
       nav {
         flex-direction: column;
         gap: 12px;
-        padding: 14px 15px;
+        padding: 14px;
       }
 
-      .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-      }
-
-      .nav-links a {
-        margin-left: 0;
-        font-size: 14px;
+      nav a {
+        margin: 0 8px;
+        font-size: 13px;
       }
 
       h1 {
@@ -214,39 +236,17 @@
         letter-spacing: 5px;
       }
 
-      .rose {
-        font-size: 58px;
-      }
-
-      .quote {
-        font-size: 18px;
+      .main-logo {
+        width: 360px;
       }
     }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px #008cff); }
-      50% { transform: scale(1.15); filter: drop-shadow(0 0 30px #00b7ff); }
-    }
-
-    @keyframes fall {
-      to {
-        transform: translateY(110vh) rotate(360deg);
-      }
-    }
-  .main-logo {
-  width: 420px;
-  max-width: 90%;
-  filter: drop-shadow(0 0 35px #009dff);
-  animation: pulse 4s infinite;
-  margin-bottom: 20px;
-}</style>
+  </style>
 </head>
 
 <body>
   <nav>
     <div class="nav-logo">ANOMALIE</div>
-
-    <div class="nav-links">
+    <div>
       <a href="#accueil">Accueil</a>
       <a href="#univers">Univers</a>
       <a href="#lore">Lore</a>
@@ -257,19 +257,17 @@
   </nav>
 
   <section class="hero" id="accueil">
-    <div class="glow"></div>
-
     <div class="content">
       <img src="logo-officiel.png" class="main-logo" alt="Logo Anomalie">
       <h1>ANOMALIE</h1>
       <h2>Le Secret de la Rose Bleue</h2>
-      <p class="quote">« Une rose continue de briller... »</p>
+      <p class="quote">« Dans la lumière oubliée... une rose continue de briller... »</p>
       <a href="#univers" class="button">Entrer dans l'univers</a>
     </div>
   </section>
 
   <section id="univers" class="main">
-    <h2>Bienvenue dans l'univers d'Anomalie</h2>
+    <h2>L'Univers d'Anomalie</h2>
 
     <p class="intro">
       Anomalie : Le Secret de la Rose Bleue est un univers fantasy mystérieux,
@@ -285,12 +283,12 @@
 
       <div class="card" id="personnages">
         <h3>👥 Personnages</h3>
-        <p>Retrouvez les héros, les gardiennes, les empereurs, les aventuriers et les figures majeures de l'univers.</p>
+        <p>Découvrez les gardiennes, les empereurs, les aventuriers et les figures majeures de l'univers.</p>
       </div>
 
       <div class="card" id="actualites">
         <h3>📰 Actualités</h3>
-        <p>Suivez les nouveautés, les annonces, les créations et l'évolution du projet Anomalie.</p>
+        <p>Suivez les annonces, les nouveautés, les créations et l'évolution du projet Anomalie.</p>
       </div>
 
       <div class="card" id="soutenir">
@@ -301,17 +299,17 @@
   </section>
 
   <footer>
-    © 2026 Anomalie : Le Secret de la Rose Bleue — Site officiel en construction
+    UNE FOI... UNE DESTINÉE... POUR L'ÉTERNITÉ.
   </footer>
 
   <script>
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 34; i++) {
       const petal = document.createElement("div");
       petal.className = "petal";
-      petal.innerHTML = "❖";
       petal.style.left = Math.random() * 100 + "vw";
-      petal.style.animationDuration = 5 + Math.random() * 8 + "s";
-      petal.style.animationDelay = Math.random() * 5 + "s";
+      petal.style.animationDuration = 7 + Math.random() * 9 + "s";
+      petal.style.animationDelay = Math.random() * 8 + "s";
+      petal.style.transform = "rotate(" + Math.random() * 360 + "deg)";
       document.body.appendChild(petal);
     }
   </script>
