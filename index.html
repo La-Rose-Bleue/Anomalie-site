@@ -19,6 +19,41 @@
       overflow-x: hidden;
     }
 
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+      background: rgba(1, 4, 15, 0.75);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(80, 170, 255, 0.4);
+    }
+
+    .nav-logo {
+      font-size: 22px;
+      letter-spacing: 4px;
+      color: #b9ddff;
+      text-shadow: 0 0 12px #2f8cff;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: #dcecff;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #6bbcff;
+      text-shadow: 0 0 10px #2f8cff;
+    }
+
     .hero {
       min-height: 100vh;
       background: radial-gradient(circle at center, #0b3a8f, #02040a 70%);
@@ -26,7 +61,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 30px;
+      padding: 90px 30px 30px;
       position: relative;
     }
 
@@ -100,7 +135,7 @@
     }
 
     .main {
-      padding: 80px 25px;
+      padding: 90px 25px;
       background: linear-gradient(#02040a, #07142d);
       text-align: center;
     }
@@ -155,6 +190,39 @@
       border-top: 1px solid #0f6fff;
     }
 
+    @media (max-width: 750px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 15px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .nav-links a {
+        margin-left: 0;
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 42px;
+        letter-spacing: 5px;
+      }
+
+      .rose {
+        font-size: 58px;
+      }
+
+      .quote {
+        font-size: 18px;
+      }
+    }
+
     @keyframes pulse {
       0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px #008cff); }
       50% { transform: scale(1.15); filter: drop-shadow(0 0 30px #00b7ff); }
@@ -169,7 +237,20 @@
 </head>
 
 <body>
-  <section class="hero">
+  <nav>
+    <div class="nav-logo">ANOMALIE</div>
+
+    <div class="nav-links">
+      <a href="#accueil">Accueil</a>
+      <a href="#univers">Univers</a>
+      <a href="#lore">Lore</a>
+      <a href="#personnages">Personnages</a>
+      <a href="#actualites">Actualités</a>
+      <a href="#soutenir">Soutenir</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="accueil">
     <div class="glow"></div>
 
     <div class="content">
@@ -177,11 +258,11 @@
       <h1>ANOMALIE</h1>
       <h2>Le Secret de la Rose Bleue</h2>
       <p class="quote">« Une rose continue de briller... »</p>
-      <a href="#accueil" class="button">Entrer dans l'univers</a>
+      <a href="#univers" class="button">Entrer dans l'univers</a>
     </div>
   </section>
 
-  <section id="accueil" class="main">
+  <section id="univers" class="main">
     <h2>Bienvenue dans l'univers d'Anomalie</h2>
 
     <p class="intro">
@@ -191,24 +272,24 @@
     </p>
 
     <div class="cards">
-      <div class="card">
-        <h3>🌍 Univers</h3>
-        <p>Découvrez les royaumes, les peuples, les lieux importants et les mystères qui façonnent Anomalie.</p>
-      </div>
-
-      <div class="card">
+      <div class="card" id="lore">
         <h3>📖 Lore</h3>
         <p>Explorez l'histoire officielle, les légendes, les événements passés et les secrets de la Rose Bleue.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="personnages">
         <h3>👥 Personnages</h3>
         <p>Retrouvez les héros, les gardiennes, les empereurs, les aventuriers et les figures majeures de l'univers.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="actualites">
+        <h3>📰 Actualités</h3>
+        <p>Suivez les nouveautés, les annonces, les créations et l'évolution du projet Anomalie.</p>
+      </div>
+
+      <div class="card" id="soutenir">
         <h3>❤️ Soutenir</h3>
-        <p>Suivez l'avancement du projet et soutenez la création d'Anomalie au fil de son évolution.</p>
+        <p>Soutenez la création d'Anomalie et accompagnez son développement au fil du temps.</p>
       </div>
     </div>
   </section>
