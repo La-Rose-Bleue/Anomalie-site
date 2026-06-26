@@ -81,13 +81,50 @@
       pointer-events: none;
     }
 
-    .content {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
-    }
+   .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
 
-    .main-logo {
+.hero-left{
+    flex:1;
+    text-align:left;
+}
+
+.hero-right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+ .main-logo{
+    width:520px;
+    max-width:92%;
+    margin-bottom:25px;
+    animation:logoFloat 5s ease-in-out infinite;
+}
+
+.hero-left h1{
+    font-size:70px;
+}
+
+.hero-left h2{
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.hero-left .quote{
+    font-size:26px;
+    margin-bottom:35px;
+}
+
+.hero-left .button{
+    display:inline-block;
+}
+    
+    {
       width: 520px;
       max-width: 92%;
       margin-bottom: 25px;
