@@ -5,68 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anomalie : Le Secret de la Rose Bleue</title>
 
-  /* ===== VERSION MOBILE ===== */
-@media (max-width: 768px) {
-
-nav {
-    padding: 12px 20px;
-    flex-direction: column;
-    gap: 15px;
-}
-
-nav .links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.hero {
-    min-height: 100vh;
-    padding: 120px 20px 40px;
-    background-position: center center;
-}
-
-.main-logo {
-    width: 280px;
-    max-width: 90%;
-}
-
-h1 {
-    font-size: 42px;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-.quote {
-    font-size: 18px;
-    padding: 0 10px;
-}
-
-.button {
-    padding: 12px 24px;
-    font-size: 16px;
-}
-}
-    
-    .sanctuaire{
-    background-image: url("sanctuaire-bg.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding:120px 0;
-    position:relative;
-      .sanctuaire::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,0.35);
-}
-<style>
-
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -119,11 +62,11 @@ h2 {
       text-align: center;
       position: relative;
       background:
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.75)),
-    url("sanctuaire.png");
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.75)),
+        url("sanctuaire.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       overflow: hidden;
     }
 
@@ -132,9 +75,10 @@ background-attachment: fixed;
       position: absolute;
       inset: 0;
       background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35))
-    radial-gradient(circle at 20% 80%, rgba(0,130,255,.25), transparent 35%),
-    radial-gradient(circle at 80% 20%, rgba(0,200,255,.18), transparent 30%);
+        linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.30)),
+        radial-gradient(circle at 20% 80%, rgba(0,130,255,.25), transparent 35%),
+        radial-gradient(circle at 80% 20%, rgba(0,200,255,.18), transparent 30%);
+      pointer-events: none;
     }
 
     .content {
@@ -144,11 +88,11 @@ background-attachment: fixed;
     }
 
     .main-logo {
-    width: 520px;
-    max-width: 92%;
-    animation: logoFloat 5s ease-in-out infinite;
-    margin-bottom: 25px;
-}
+      width: 520px;
+      max-width: 92%;
+      margin-bottom: 25px;
+      animation: logoFloat 5s ease-in-out infinite;
+    }
 
     h1 {
       font-size: 62px;
@@ -271,38 +215,99 @@ background-attachment: fixed;
     }
 
     @keyframes logoFloat {
-    0%,100% {
-        transform: translateY(-140px);
-    }
-    50% {
-        transform: translateY(-150px);
-    }
-}
-
-    @keyframes breathe {
-      from { opacity: .5; }
-      to { opacity: 1; }
+      0%, 100% {
+        transform: translateY(-120px);
+      }
+      50% {
+        transform: translateY(-132px);
+      }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 768px) {
       nav {
+        position: relative;
+        padding: 20px 15px;
         flex-direction: column;
-        gap: 12px;
-        padding: 14px;
+        gap: 18px;
+      }
+
+      .nav-logo {
+        font-size: 34px;
+        letter-spacing: 7px;
+        text-align: center;
+      }
+
+      nav div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 24px;
       }
 
       nav a {
-        margin: 0 8px;
-        font-size: 13px;
+        margin-left: 0;
+        font-size: 26px;
       }
 
-      h1 {
-        font-size: 42px;
-        letter-spacing: 5px;
+      .hero {
+        min-height: 100vh;
+        padding: 30px 15px 50px;
+        background-position: center top;
+        background-attachment: scroll;
+        align-items: flex-start;
       }
 
       .main-logo {
-        width: 360px;
+        width: 330px;
+        max-width: 95%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        animation: logoFloatMobile 5s ease-in-out infinite;
+      }
+
+      h1 {
+        font-size: 46px;
+        letter-spacing: 8px;
+      }
+
+      h2 {
+        font-size: 22px;
+        letter-spacing: 2px;
+      }
+
+      .quote {
+        font-size: 18px;
+      }
+
+      .button {
+        padding: 13px 26px;
+        font-size: 16px;
+      }
+
+      .main {
+        padding: 70px 22px;
+      }
+
+      .main h2 {
+        font-size: 34px;
+      }
+
+      .intro {
+        font-size: 18px;
+      }
+
+      .petal {
+        width: 16px;
+        height: 24px;
+      }
+    }
+
+    @keyframes logoFloatMobile {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
       }
     }
   </style>
