@@ -14,6 +14,17 @@
     background-attachment: fixed;
     padding:120px 0;
     position:relative;
+      .sanctuaire::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.35);
+}
+
+.sanctuaire>*{
+    position:relative;
+    z-index:1;
+}
 }
     * { box-sizing: border-box; scroll-behavior: smooth; }
 
