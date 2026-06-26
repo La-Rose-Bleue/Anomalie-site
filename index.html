@@ -106,9 +106,8 @@ background-attachment: fixed;
     .main-logo {
     width: 520px;
     max-width: 92%;
-    animation: none;
+    animation: logoFloat 5s ease-in-out infinite;
     margin-bottom: 25px;
-      transform: translateY(-140px);
 }
 
     h1 {
@@ -232,9 +231,13 @@ background-attachment: fixed;
     }
 
     @keyframes logoFloat {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
+    0%,100% {
+        transform: translateY(-140px);
     }
+    50% {
+        transform: translateY(-150px);
+    }
+}
 
     @keyframes breathe {
       from { opacity: .5; }
