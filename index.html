@@ -6,10 +6,14 @@
   <title>Anomalie : Le Secret de la Rose Bleue</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      min-height: 100vh;
-      background: radial-gradient(circle at center, #08245c, #02040a 70%);
+      background: #02040a;
       color: white;
       font-family: Georgia, serif;
       overflow-x: hidden;
@@ -17,6 +21,7 @@
 
     .hero {
       min-height: 100vh;
+      background: radial-gradient(circle at center, #0b3a8f, #02040a 70%);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -27,10 +32,10 @@
 
     .glow {
       position: absolute;
-      width: 420px;
-      height: 420px;
+      width: 450px;
+      height: 450px;
       background: #006eff;
-      filter: blur(120px);
+      filter: blur(130px);
       opacity: 0.35;
       border-radius: 50%;
     }
@@ -38,11 +43,11 @@
     .content {
       position: relative;
       z-index: 2;
-      max-width: 800px;
+      max-width: 850px;
     }
 
     .rose {
-      font-size: 70px;
+      font-size: 72px;
       animation: pulse 3s infinite;
     }
 
@@ -60,24 +65,26 @@
       margin-bottom: 35px;
     }
 
-    p {
+    .quote {
       font-size: 22px;
       color: #dcecff;
       margin-bottom: 40px;
     }
 
-    button {
+    .button {
+      display: inline-block;
       padding: 18px 35px;
       font-size: 20px;
       color: white;
+      text-decoration: none;
       background: linear-gradient(90deg, #082d6b, #0f6fff);
       border: 1px solid #7fc8ff;
       border-radius: 8px;
-      cursor: pointer;
       box-shadow: 0 0 25px #006eff;
+      transition: 0.3s;
     }
 
-    button:hover {
+    .button:hover {
       transform: scale(1.05);
     }
 
@@ -88,6 +95,64 @@
       font-size: 25px;
       animation: fall linear infinite;
       opacity: 0.8;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .main {
+      padding: 80px 25px;
+      background: linear-gradient(#02040a, #07142d);
+      text-align: center;
+    }
+
+    .main h2 {
+      font-size: 38px;
+      color: #b9ddff;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: 0 auto 60px;
+      font-size: 20px;
+      line-height: 1.7;
+      color: #d6e8ff;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(8, 35, 85, 0.55);
+      border: 1px solid #2f8cff;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 0 25px rgba(0, 110, 255, 0.25);
+      min-height: 210px;
+    }
+
+    .card h3 {
+      color: #8fc8ff;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #dcecff;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      background: #010208;
+      color: #8fc8ff;
+      border-top: 1px solid #0f6fff;
     }
 
     @keyframes pulse {
@@ -104,20 +169,56 @@
 </head>
 
 <body>
-  <div class="hero">
+  <section class="hero">
     <div class="glow"></div>
 
     <div class="content">
       <div class="rose">🌹</div>
       <h1>ANOMALIE</h1>
       <h2>Le Secret de la Rose Bleue</h2>
-      <p>« Une rose continue de briller... »</p>
-      <button>Entrer dans l'univers</button>
+      <p class="quote">« Une rose continue de briller... »</p>
+      <a href="#accueil" class="button">Entrer dans l'univers</a>
     </div>
-  </div>
+  </section>
+
+  <section id="accueil" class="main">
+    <h2>Bienvenue dans l'univers d'Anomalie</h2>
+
+    <p class="intro">
+      Anomalie : Le Secret de la Rose Bleue est un univers fantasy mystérieux,
+      construit autour de royaumes, d'affinités élémentaires, de légendes anciennes
+      et d'une rose bleue dont le secret pourrait changer le destin du monde.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🌍 Univers</h3>
+        <p>Découvrez les royaumes, les peuples, les lieux importants et les mystères qui façonnent Anomalie.</p>
+      </div>
+
+      <div class="card">
+        <h3>📖 Lore</h3>
+        <p>Explorez l'histoire officielle, les légendes, les événements passés et les secrets de la Rose Bleue.</p>
+      </div>
+
+      <div class="card">
+        <h3>👥 Personnages</h3>
+        <p>Retrouvez les héros, les gardiennes, les empereurs, les aventuriers et les figures majeures de l'univers.</p>
+      </div>
+
+      <div class="card">
+        <h3>❤️ Soutenir</h3>
+        <p>Suivez l'avancement du projet et soutenez la création d'Anomalie au fil de son évolution.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Anomalie : Le Secret de la Rose Bleue — Site officiel en construction
+  </footer>
 
   <script>
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 30; i++) {
       const petal = document.createElement("div");
       petal.className = "petal";
       petal.innerHTML = "❖";
