@@ -201,6 +201,15 @@
     background-position: center;
     background-attachment: fixed;
 
+  .hero-text{
+    display:inline-block;
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(4px);
+    padding:25px 40px;
+    border-radius:20px;
+    margin-bottom:45px;
+}
+      
     .main h2 {
       font-size: 42px;
       color: #d9efff;
@@ -420,6 +429,7 @@ nav a:hover::after {
   </nav>
 
   <section id="univers" class="main">
+  <div class="hero-text">
     <h2>L'Univers d'Anomalie</h2>
 
     <p class="intro">
@@ -427,7 +437,8 @@ nav a:hover::after {
       construit autour de royaumes, d'affinités élémentaires, de légendes anciennes
       et d'une rose bleue dont le secret pourrait changer le destin du monde.
     </p>
-
+    </div>
+    
     <div class="cards">
 
     <div class="card" id="univers-monde">
