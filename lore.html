@@ -410,6 +410,24 @@ nav a:hover::after {
       50% {
         transform: translateY(-10px);
       }
+    .episode-card {
+    max-width: 700px;
+    margin: 15px auto;
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.45);
+    border: 2px solid #3ca8ff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+    font-size: 22px;
+    font-weight: bold;
+    }
+
+    .episode-card span {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #8fdcff;
+    font-weight: normal;
     }
   </style>
 
@@ -456,12 +474,23 @@ Merci pour votre patience et votre soutien dans cette aventure.
     </p>
 
     <div class="episodes" style="text-align:center;">
-    <p>📖 Épisode 1 — Le Réveil des Éléments (Bientôt disponible)</p>
-    <p>📖 Épisode 2 — Un Souvenir Effrayant (Bientôt disponible)</p>
-    <p>📖 Épisode 3 — L'Accident de la Rose Bleue (Bientôt disponible)</p>
+
+    <div class="episode-card">
+        📖 Épisode 1 — Le Réveil des Éléments
+        <span>Bientôt disponible</span>
     </div>
 
-  </div>
+    <div class="episode-card">
+        📖 Épisode 2 — Un Souvenir Effrayant
+        <span>Bientôt disponible</span>
+    </div>
+
+    <div class="episode-card">
+        📖 Épisode 3 — L'Accident de la Rose Bleue
+        <span>Bientôt disponible</span>
+    </div>
+
+</div>
   </section>
 
   <footer>
