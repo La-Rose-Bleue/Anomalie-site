@@ -319,6 +319,9 @@ nav a:hover::after {
         text-align: center;
         background-position: center top;
         background-attachment: scroll;
+
+        position: relative;
+        overflow: hidden;
       }
 
       .hero-left {
@@ -481,7 +484,7 @@ nav a:hover::after {
       petal.style.animationDuration = 7 + Math.random() * 9 + "s";
       petal.style.animationDelay = Math.random() * 8 + "s";
       petal.style.transform = "rotate(" + Math.random() * 360 + "deg)";
-      document.body.appendChild(petal);
+      document.querySelector(".hero").appendChild(petal);
     }
   </script>
 </body>
