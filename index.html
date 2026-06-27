@@ -291,8 +291,29 @@
       }
 
       nav a {
-        font-size: 25px;
-      }
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #6fc6ff;
+  box-shadow: 0 0 10px #008cff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #6fc6ff;
+  text-shadow: 0 0 10px #008cff;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
 
       .hero {
         min-height: 100vh;
