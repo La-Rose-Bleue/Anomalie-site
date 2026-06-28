@@ -533,12 +533,14 @@ footer {
     justify-content:center;
     gap:80px;
     flex-wrap:wrap;
+    margin-top:20px;
 }
 
-royaumes img{
-    width:360px;
+.royaumes img{
+    width:260px;
     transition:0.3s;
     cursor:pointer;
+    mix-blend-mode: screen;
 }
 
 .royaumes img:hover{
