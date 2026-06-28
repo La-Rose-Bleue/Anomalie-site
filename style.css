@@ -560,20 +560,29 @@ footer {
 
 .btn-retour{
     display:inline-block;
-    margin-top:50px;
+    margin-top:45px;
     margin-bottom:30px;
-    padding:15px 35px;
-    background:rgba(0,0,0,0.65);
+    padding:16px 42px;
+
+    background:linear-gradient(90deg,#061b45,#0c63d8);
     color:white;
+
     text-decoration:none;
-    border:2px solid gold;
-    border-radius:12px;
-    font-size:22px;
+    font-size:20px;
     font-weight:bold;
-    transition:0.3s;
+    letter-spacing:1px;
+
+    border:1px solid #7fd4ff;
+    border-radius:14px;
+
+    box-shadow:0 0 25px #007bff;
+
+    transition:all .3s ease;
 }
 
 .btn-retour:hover{
-    background:gold;
-    color:black;
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 0 40px #00bfff;
+    border-color:#bfeaff;
+    color:white;
 }
