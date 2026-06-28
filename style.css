@@ -535,10 +535,11 @@ footer {
     flex-wrap:wrap;
 }
 
-.royaumes img{
-    width:260px;
+royaumes img{
+    width:360px;
     transition:0.3s;
     cursor:pointer;
+    mix-blend-mode: screen;
 }
 
 .royaumes img:hover{
