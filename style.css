@@ -499,3 +499,55 @@ footer {
     font-size: 34px;
   }
 }
+
+/* ===== PAGE PERSONNAGES ===== */
+
+.personnages-page{
+    min-height:100vh;
+    background:url("personnages.png") center center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.personnages-page h1{
+    font-size:70px;
+    color:white;
+    margin-bottom:20px;
+    text-shadow:0 0 20px black;
+}
+
+.description{
+    color:white;
+    font-size:24px;
+    max-width:900px;
+    margin-bottom:70px;
+    text-shadow:0 0 10px black;
+}
+
+.royaumes{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+.royaumes img{
+    width:260px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.royaumes img:hover{
+    transform:scale(1.08);
+}
+
+.footer-text{
+    color:white;
+    margin-top:70px;
+    font-size:18px;
+    text-shadow:0 0 10px black;
+}
