@@ -507,7 +507,8 @@ footer {
     background:url("personnages.png") center center/cover no-repeat;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
+    padding-top:70px;
     align-items:center;
     text-align:center;
     padding:40px;
@@ -524,7 +525,7 @@ footer {
     color:white;
     font-size:24px;
     max-width:900px;
-    margin-bottom:70px;
+    margin-bottom:35px;
     text-shadow:0 0 10px black;
 }
 
