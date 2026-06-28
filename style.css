@@ -601,10 +601,12 @@ footer {
    IMAGES DES CARTES
 =========================== */
 
-#accueil{
+#accueil.card{
     background-image: url("carteacceuil.png");
     background-size: cover;
     background-position: center;
+    padding:0;
+    overflow:hidden;
 }
 
 #lore{
