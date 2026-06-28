@@ -288,14 +288,11 @@ footer {
 .card{
     padding:30px;
     background:linear-gradient(rgba(5,25,65,.85),rgba(1,5,20,.9));
-    border:1px solid rgba(110,200,255,.65);
     border-radius:18px;
-    box-shadow:0 0 20px rgba(0,120,255,.25);
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
     box-shadow:0 0 35px rgba(0,150,255,.45);
 }
 
@@ -600,7 +597,6 @@ footer {
 /* ===========================
    IMAGES DES CARTES
 =========================== */
-
 #carte-accueil{
     background-image: url("carteacceuil.png");
     background-size: cover;
