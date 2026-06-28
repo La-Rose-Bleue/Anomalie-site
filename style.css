@@ -589,3 +589,37 @@ footer {
     border-color:#bfeaff;
     color:white;
 }
+
+/* ===========================
+   IMAGES DES CARTES
+=========================== */
+
+#accueil{
+    background-image: url("carteacceuil.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#lore{
+    background-image: url("cartelore.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#personnages{
+    background-image: url("cartepersonnages.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#encyclopedie{
+    background-image: url("carteencyclopedie.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#soutenir{
+    background-image: url("cartesoutenir.png");
+    background-size: cover;
+    background-position: center;
+}
