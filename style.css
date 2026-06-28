@@ -601,7 +601,7 @@ footer {
    IMAGES DES CARTES
 =========================== */
 
-#accueil.card{
+#carte-accueil{
     background-image: url("carteacceuil.png");
     background-size: cover;
     background-position: center;
