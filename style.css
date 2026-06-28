@@ -286,7 +286,7 @@ footer {
 }
 
 .card{
-    padding:30px;
+    padding:0;
     background:linear-gradient(rgba(5,25,65,.85),rgba(1,5,20,.9));
     border:1px solid rgba(110,200,255,.65);
     border-radius:18px;
@@ -339,7 +339,6 @@ footer {
     height:100%;
     object-fit:cover;
     border-radius:18px;
-    display:block;
 }
 
 .episode-card img:hover{
