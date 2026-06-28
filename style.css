@@ -557,3 +557,24 @@ footer {
     font-size:18px;
     text-shadow:0 0 10px black;
 }
+
+.btn-retour{
+    position:absolute;
+    top:30px;
+    left:30px;
+    padding:12px 24px;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    text-decoration:none;
+    border:2px solid gold;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+    transition:.3s;
+    z-index:1000;
+}
+
+.btn-retour:hover{
+    background:gold;
+    color:black;
+}
