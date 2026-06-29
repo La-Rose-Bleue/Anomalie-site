@@ -756,6 +756,11 @@ footer {
     display:block;
 }
 
+.minallia-node .rose-icon img{
+    width:85px;
+    height:85px;
+}
+
 .minallia-node{
     top:-95px;
     left:50%;
