@@ -621,7 +621,8 @@ footer {
 
 #carte-encyclopedie{
     background-image: url("carteencyclopedie.png");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     padding: 0;
     overflow: hidden;
