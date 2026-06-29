@@ -662,3 +662,205 @@ footer {
     padding: 0;
     overflow: hidden;
 }
+
+/* ==========================
+   PERSONNAGES - SANCTUAIRE
+========================== */
+
+.sanctuaire-page{
+    max-width:1400px;
+    margin:auto;
+    padding:70px 35px;
+}
+
+.intro-sanctuaire{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.intro-sanctuaire h1{
+    font-size:58px;
+    color:#ffffff;
+    margin-bottom:20px;
+    text-shadow:0 0 20px rgba(70,170,255,.8);
+}
+
+.intro-sanctuaire p{
+    max-width:900px;
+    margin:auto;
+    font-size:22px;
+    line-height:1.8;
+    color:#dce8ff;
+}
+
+.minallia-card{
+    display:flex;
+    align-items:center;
+    gap:40px;
+
+    margin:70px 0;
+
+    padding:35px;
+
+    background:rgba(0,0,0,.45);
+
+    border:2px solid rgba(80,180,255,.35);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 30px rgba(0,170,255,.25);
+}
+
+.minallia-image{
+    width:520px;
+    height:300px;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+}
+
+.minallia-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.minallia-text{
+    flex:1;
+}
+
+.minallia-text h2{
+    font-size:52px;
+    color:#ffffff;
+    margin-bottom:10px;
+}
+
+.minallia-text h3{
+    font-size:30px;
+    color:#6bc8ff;
+    margin-bottom:25px;
+}
+
+.minallia-text p{
+    font-size:22px;
+    line-height:1.8;
+    color:#dce8ff;
+}
+
+.titre-enfants{
+    text-align:center;
+    margin-top:90px;
+    margin-bottom:50px;
+
+    font-size:44px;
+
+    color:white;
+
+    text-shadow:0 0 18px rgba(70,170,255,.8);
+}
+
+.enfants-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-bottom:70px;
+}
+
+.enfant-card{
+
+    background:rgba(0,0,0,.45);
+
+    border:2px solid rgba(80,180,255,.35);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    transition:.3s;
+
+    backdrop-filter:blur(8px);
+}
+
+.enfant-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.enfant-card img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+}
+
+.enfant-card h3{
+
+    color:white;
+
+    margin-top:20px;
+
+    font-size:26px;
+}
+
+.enfant-card p{
+
+    color:#cfe4ff;
+
+    padding:15px 20px 25px;
+
+    line-height:1.6;
+}
+
+@media(max-width:1000px){
+
+.minallia-card{
+
+    flex-direction:column;
+}
+
+.minallia-image{
+
+    width:100%;
+
+    height:auto;
+}
+
+.enfants-grid{
+
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:650px){
+
+.enfants-grid{
+
+    grid-template-columns:1fr;
+}
+
+.intro-sanctuaire h1{
+
+    font-size:42px;
+}
+
+.minallia-text h2{
+
+    font-size:40px;
+}
+
+}
