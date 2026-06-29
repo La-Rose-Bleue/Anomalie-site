@@ -780,6 +780,7 @@ footer {
 .minallia-node:hover,
 .minallia-node.active{
     transform:translateX(-50%) scale(1.08);
+    box-shadow:0 0 35px #00cfff;
 }
 
 .node-1{ top:55px; right:55px; }
