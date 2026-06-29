@@ -615,6 +615,8 @@ footer {
     background-image: url("cartepersonnages.png");
     background-size: cover;
     background-position: center;
+    padding: 0;
+    overflow: hidden;
 }
 
 #carte-encyclopedie{
