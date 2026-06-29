@@ -756,9 +756,20 @@ footer {
     display:block;
 }
 
+.minallia-node .rose-icon{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
 .minallia-node .rose-icon img{
     width:85px;
     height:85px;
+    object-fit:contain;
 }
 
 .minallia-node{
