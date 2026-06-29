@@ -129,6 +129,30 @@ footer {
   letter-spacing: 2px;
 }
 
+.retour-univers{
+    text-align:center;
+    margin:50px 0;
+}
+
+.btn-retour{
+    display:inline-block;
+    padding:16px 35px;
+    background:linear-gradient(#1b4cff,#0b1f6e);
+    color:#fff;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:bold;
+    border:2px solid #7ec8ff;
+    border-radius:14px;
+    box-shadow:0 0 20px rgba(0,170,255,.4);
+    transition:.3s;
+}
+
+.btn-retour:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 35px rgba(0,170,255,.8);
+}
+
 /* =========================
    ACCUEIL - HERO
 ========================= */
