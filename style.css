@@ -720,8 +720,8 @@ footer {
 
 .rose-node{
     position:absolute;
-    width:90px;
-    height:90px;
+    width:80px;
+    height:80px;
     border-radius:50%;
     border:2px solid rgba(120,220,255,.8);
     background:rgba(0,10,35,.85);
@@ -753,8 +753,8 @@ footer {
     top:-95px;
     left:50%;
     transform:translateX(-50%);
-    width:150px;
-    height:150px;
+    width:135px;
+    height:135px;
     border-color:#c58cff;
 }
 
