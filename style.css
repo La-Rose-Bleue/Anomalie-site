@@ -718,6 +718,12 @@ footer {
     box-shadow:0 0 35px #00bfff;
 }
 
+.rose-centre img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
 .rose-node{
     position:absolute;
     width:80px;
