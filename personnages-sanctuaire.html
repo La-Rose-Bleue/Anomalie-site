@@ -2,40 +2,82 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personnages - Sanctuaire de la Rose Bleue</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-<nav>
+    <nav>
+    <div class="nav-logo">ANOMALIE</div>
+    <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="univers.html">Univers</a>
+        <a href="lore.html">Lore</a>
+        <a href="personnages.html">Personnages</a>
+        <a href="encyclopedie.html">Encyclopédie</a>
+        <a href="#soutenir">Soutenir</a>
+    </div>
 </nav>
 
 <section class="sanctuaire-page">
 
-  <div class="intro-sanctuaire">
-    <h1>Sanctuaire de la Rose Bleue</h1>
-    <p>Huit gardiennes. Huit affinités. Une seule mission : préserver le secret du Sanctuaire de la Rose Bleue.</p>
-  </div>
-
-  <div class="minallia-card">
-    <div class="minallia-image"></div>
-    <div class="minallia-text">
-      <h2>Minallia</h2>
-      <h3>Gardienne de la Rose Bleue</h3>
-      <p>Commandante des Enfants de la Rose Bleue, elle veille sur le Sanctuaire et protège son secret.</p>
+    <div class="sanctuaire-intro">
+        <h1>Sanctuaire de la Rose Bleue</h1>
+        <p>Huit gardiennes immortelles. Huit affinités. Une seule mission : préserver le secret du Sanctuaire de la Rose Bleue.</p>
     </div>
-  </div>
 
-  <h2>Les Enfants de la Rose Bleue</h2>
+    <div class="rose-orbite">
 
-  <div class="enfants-grid">
-    <!-- 8 cartes ici -->
-  </div>
+        <button class="rose-node minallia-node active" data-fiche="minallia">
+            <span class="rose-icon rose-multi">🌹</span>
+            <span>MINALLIA</span>
+        </button>
 
-  <a href="personnages.html" class="btn-retour">← Retour aux personnages</a>
+        <button class="rose-node node-1" data-fiche="tenebres">
+            <span class="rose-icon rose-tenebres">🌹</span>
+            <span>I</span>
+        </button>
+
+        <button class="rose-node node-2" data-fiche="glace">
+            <span class="rose-icon rose-glace">🌹</span>
+            <span>II</span>
+        </button>
+
+        <button class="rose-node node-3" data-fiche="feu">
+            <span class="rose-icon rose-feu">🌹</span>
+            <span>III</span>
+        </button>
+
+        <button class="rose-node node-4" data-fiche="eau">
+            <span class="rose-icon rose-eau">🌹</span>
+            <span>IV</span>
+        </button>
+
+        <button class="rose-node node-5" data-fiche="vent">
+            <span class="rose-icon rose-vent">🌹</span>
+            <span>V</span>
+        </button>
+
+        <button class="rose-node node-6" data-fiche="lumiere">
+            <span class="rose-icon rose-lumiere">🌹</span>
+            <span>VI</span>
+        </button>
+
+        <button class="rose-node node-7" data-fiche="foudre">
+            <span class="rose-icon rose-foudre">🌹</span>
+            <span>VII</span>
+        </button>
+
+        <button class="rose-node node-8" data-fiche="terre">
+            <span class="rose-icon rose-terre">🌹</span>
+            <span>VIII</span>
+        </button>
+
+        <div class="rose-centre">🌹</div>
+    </div>
+
+    <div class="fiche-sanctuaire" id="fiche-sanctuaire">
+        <h2>Minallia</h2>
+        <h3>Gardienne de la Rose Bleue</h3>
+        <p>Commandante des Enfants de la Rose Bleue, elle veille sur le Sanctuaire et protège son secret.</p>
+    </div>
+
+    <a href="personnages.html" class="btn-retour">← Retour aux personnages</a>
 
 </section>
 </body>
