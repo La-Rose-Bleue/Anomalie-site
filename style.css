@@ -617,10 +617,12 @@ footer {
     background-position: center;
 }
 
-#encyclopedie{
+#carte-encyclopedie{
     background-image: url("carteencyclopedie.png");
     background-size: cover;
     background-position: center;
+    padding: 0;
+    overflow: hidden;
 }
 
 #soutenir{
