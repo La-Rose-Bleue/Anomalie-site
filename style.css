@@ -714,16 +714,7 @@ footer {
 }
 
 .minallia-image{
-    width:520px;
-    height:300px;
-
-    border-radius:18px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    overflow:hidden;
+    display:none;
 }
 
 .minallia-image img{
