@@ -526,7 +526,9 @@ setInterval(() => {
 }, 500);
 
 document.getElementById("playBtn").onclick = () => {
+    musique.volume = document.getElementById("volumeSlider").value / 100;
     musique.play();
+    localStorage.setItem("musiqueAnomalie", "active");
 };
 
 document.getElementById("pauseBtn").onclick = () => {
