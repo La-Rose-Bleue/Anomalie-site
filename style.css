@@ -743,44 +743,9 @@ footer {
 
 .rose-node:hover,
 .rose-node.active{
-    .node-1:hover, .node-1.active{
-    transform:rotate(40deg) translateY(-330px) rotate(-40deg) scale(1.08);
+    transform:rotate(0deg) translateY(-330px) rotate(0deg) scale(1.08);
     box-shadow:0 0 35px #00cfff;
 }
-
-.node-2:hover, .node-2.active{
-    transform:rotate(80deg) translateY(-330px) rotate(-80deg) scale(1.08);
-    box-shadow:0 0 35px #00cfff;
-}
-
-.node-3:hover, .node-3.active{
-    transform:rotate(120deg) translateY(-330px) rotate(-120deg) scale(1.08);
-    box-shadow:0 0 35px #00cfff;
-}
-
-.node-4:hover, .node-4.active{
-    transform:rotate(160deg) translateY(-330px) rotate(-160deg) scale(1.08);
-    box-shadow:0 0 35px #00cfff;
-}
-
-.node-5:hover, .node-5.active{
-    transform:rotate(200deg) translateY(-330px) rotate(-200deg) scale(1.08);
-    box-shadow:0 0 35px #00cfff;
-}
-
-.node-6:hover, .node-6.active{
-    transform:rotate(240deg) translateY(-330px) rotate(-240deg) scale(1.08);
-    box-shadow:0 0 35px #00cfff;
-}
-
-.node-7:hover, .node-7.active{
-    transform:rotate(280deg) translateY(-330px) rotate(-280deg) scale(1.08);
-    box-shadow:0 0 35px #00cfff;
-}
-
-.node-8:hover, .node-8.active{
-    transform:rotate(320deg) translateY(-330px) rotate(-320deg) scale(1.08);
-    box-shadow:0 0 35px #00cfff;
 }
 
 .rose-icon{
