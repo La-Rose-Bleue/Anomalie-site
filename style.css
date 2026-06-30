@@ -930,3 +930,30 @@ footer {
     width: 90px;
     accent-color: #7fcfff;
 }
+
+#audioControls {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+}
+
+#audioControls button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#audioControls input {
+    width: 70px;
+}
