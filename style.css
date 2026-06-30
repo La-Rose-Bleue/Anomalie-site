@@ -692,8 +692,8 @@ footer {
 
 .rose-orbite{
     position:relative;
-    width:700px;
-    height:700px;
+    width:660px;
+    height:660px;
     margin:140px auto 80px;
     border-radius:50%;
     background:radial-gradient(circle, rgba(0,180,255,.25), rgba(0,0,40,.35) 45%, transparent 70%);
