@@ -685,14 +685,14 @@ footer {
 
 .sanctuaire-intro p{
     max-width:850px;
-    margin:20px auto 40px;
+    margin:20px auto 5px;
     font-size:20px;
     color:#dff6ff;
 }
 
 .clique-rose-banner{
     text-align: center;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-bottom: -20px;
 }
 
