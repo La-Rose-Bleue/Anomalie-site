@@ -487,6 +487,11 @@ nav a:hover::after {
 <script>
 const musique = document.getElementById("musiqueAccueil");
 
+const volume = localStorage.getItem("volumeAnomalie") || 30;
+
+document.getElementById("volumeSlider").value = volume;
+musique.volume = volume / 100;
+  
 function reprendreTemps() {
     const tempsSauvegarde = localStorage.getItem("tempsMusiqueAnomalie");
     if (tempsSauvegarde) {
@@ -513,5 +518,19 @@ setInterval(() => {
         localStorage.setItem("tempsMusiqueAnomalie", musique.currentTime);
     }
 }, 500);
+
+document.getElementById("playBtn").onclick = () => {
+    musique.play();
+};
+
+document.getElementById("pauseBtn").onclick = () => {
+    musique.pause();
+};
+
+document.getElementById("volumeSlider").oninput = function () {
+    musique.volume = this.value / 100;
+    localStorage.setItem("volumeAnomalie", this.value);
+};
+  
 </script>
 </body>
