@@ -743,8 +743,8 @@ footer {
 
 .rose-node:hover,
 .rose-node.active{
-    transform:scale(1.1);
     box-shadow:0 0 35px #00cfff;
+    filter:brightness(1.15);
 }
 
 .rose-icon{
