@@ -790,14 +790,48 @@ footer {
     box-shadow:0 0 35px #00cfff;
 }
 
-.node-1{ top:35px; right:35px; }
-.node-2{ top:205px; right:-30px; }
-.node-3{ bottom:85px; right:35px; }
-.node-4{ bottom:-15px; right:185px; }
-.node-5{ bottom:-15px; left:185px; }
-.node-6{ bottom:85px; left:35px; }
-.node-7{ top:205px; left:-30px; }
-.node-8{ top:35px; left:35px; }
+.rose-node{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:80px;
+    height:80px;
+
+    margin-left:-40px;
+    margin-top:-40px;
+}
+
+.node-1{
+    transform:rotate(0deg) translateY(-330px);
+}
+
+.node-2{
+    transform:rotate(45deg) translateY(-330px);
+}
+
+.node-3{
+    transform:rotate(90deg) translateY(-330px);
+}
+
+.node-4{
+    transform:rotate(135deg) translateY(-330px);
+}
+
+.node-5{
+    transform:rotate(180deg) translateY(-330px);
+}
+
+.node-6{
+    transform:rotate(225deg) translateY(-330px);
+}
+
+.node-7{
+    transform:rotate(270deg) translateY(-330px);
+}
+
+.node-8{
+    transform:rotate(315deg) translateY(-330px);
+}
 
 .rose-multi{ color:#ff66ff; }
 .rose-tenebres{ color:#8a3cff; }
