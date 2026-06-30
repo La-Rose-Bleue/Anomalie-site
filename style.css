@@ -692,7 +692,8 @@ footer {
 
 .clique-rose-banner{
     text-align: center;
-    margin: 10px 0 15px;
+    margin-top: 8px;
+    margin-bottom: -10px;
 }
 
 .clique-rose-banner img{
