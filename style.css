@@ -773,17 +773,21 @@ footer {
 }
 
 .minallia-node{
-    top:-95px;
+    position:absolute;
+    top:50%;
     left:50%;
-    transform:translateX(-50%);
     width:125px;
     height:125px;
+    margin-left:-62.5px;
+    margin-top:-62.5px;
+    transform:rotate(0deg) translateY(-330px) rotate(0deg);
     border-color:#c58cff;
+    z-index:20;
 }
 
 .minallia-node:hover,
 .minallia-node.active{
-    transform:translateX(-50%) scale(1.08);
+    transform:rotate(0deg) translateY(-330px) rotate(0deg) scale(1.08);
     box-shadow:0 0 35px #00cfff;
 }
 
@@ -798,7 +802,6 @@ footer {
 }
 
 .minallia-node{ transform:rotate(0deg) translateY(-330px) rotate(0deg); }
-
 .node-1{ transform:rotate(40deg) translateY(-330px) rotate(-40deg); }
 .node-2{ transform:rotate(80deg) translateY(-330px) rotate(-80deg); }
 .node-3{ transform:rotate(120deg) translateY(-330px) rotate(-120deg); }
