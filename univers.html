@@ -467,7 +467,22 @@ nav a:hover::after {
     UNE FOI... UNE DESTINÉE... POUR L'ÉTERNITÉ.
   </footer>
 
-  <script>
-    }
-  </script>
+  <audio id="musiqueAccueil" loop>
+    <source src="blueroseacceuil.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const musique = document.getElementById("musiqueAccueil");
+
+if (localStorage.getItem("musiqueAnomalie") === "active") {
+    musique.volume = 0.3;
+    musique.play().catch(() => {});
+} else {
+    document.addEventListener("click", () => {
+        musique.volume = 0.3;
+        musique.play();
+        localStorage.setItem("musiqueAnomalie", "active");
+    }, { once: true });
+}
+</script>
 </body>
