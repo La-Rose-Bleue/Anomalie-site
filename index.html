@@ -449,18 +449,25 @@ nav a:hover::after {
 </audio>
   
   <script>
-  
 const musique = document.getElementById("musiqueAccueil");
 
 document.addEventListener("click", () => {
     musique.volume = 0.3;
     musique.play();
-  
-  localStorage.setItem("musiqueAnomalie", "active");
+    localStorage.setItem("musiqueAnomalie", "active");
+}, { once: true });
+
+const tempsSauvegarde = localStorage.getItem("tempsMusiqueAnomalie");
+if (tempsSauvegarde) {
+    musique.currentTime = parseFloat(tempsSauvegarde);
+}
 
 setInterval(() => {
-    localStorage.setItem("tempsMusiqueAnomalie", musique.currentTime);
+    if (!musique.paused) {
+        localStorage.setItem("tempsMusiqueAnomalie", musique.currentTime);
+    }
 }, 500);
+</script>
   
 }, { once: true });
     
