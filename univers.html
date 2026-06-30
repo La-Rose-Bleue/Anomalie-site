@@ -536,6 +536,7 @@ document.getElementById("playBtn").onclick = () => {
 
 document.getElementById("pauseBtn").onclick = () => {
     musique.pause();
+    localStorage.setItem("musiqueAnomalie", "pause");
 };
 
 document.getElementById("volumeSlider").oninput = function () {
