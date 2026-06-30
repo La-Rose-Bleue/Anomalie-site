@@ -706,24 +706,16 @@ footer {
     top:50%;
     left:50%;
     transform:translate(-50%, -50%);
-    z-index: 2;
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:95px;
-    background:rgba(0,20,60,.65);
-    border:2px solid #00bfff;
-    box-shadow:0 0 35px #00bfff;
+    width:380px;
+    height:380px;
+    z-index:5;
 }
 
 .rose-centre img{
-    width: 380px;
-    height: 380px;
-    object-fit: contain;
-    animation: rotationRose 40s linear infinite;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    animation:rotationRose 40s linear infinite;
 }
 
 .rose-node{
@@ -799,13 +791,6 @@ footer {
     height:80px;
     margin-left:-40px;
     margin-top:-40px;
-}
-
-.rose-wheel{
-    position: relative;
-    width: 660px;
-    height: 660px;
-    margin: 0 auto;
 }
 
 .node-1{ transform:rotate(0deg) translateY(-330px) rotate(0deg); }
