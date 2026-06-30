@@ -719,8 +719,8 @@ footer {
 }
 
 .rose-centre img{
-    width: 340px;
-    height: 340px;
+    width: 380px;
+    height: 380px;
     object-fit: contain;
     animation: rotationRose 40s linear infinite;
 }
