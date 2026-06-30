@@ -800,6 +800,13 @@ footer {
     margin-top:-40px;
 }
 
+.rose-wheel{
+    position: relative;
+    width: 660px;
+    height: 660px;
+    margin: 0 auto;
+}
+
 .node-1{ transform:rotate(0deg) translateY(-330px) rotate(0deg); }
 .node-2{ transform:rotate(45deg) translateY(-330px) rotate(-45deg); }
 .node-3{ transform:rotate(90deg) translateY(-330px) rotate(-90deg); }
