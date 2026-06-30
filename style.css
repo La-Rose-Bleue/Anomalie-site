@@ -741,10 +741,23 @@ footer {
     transition:.3s;
 }
 
+@keyframes pulseRose {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.12);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .rose-node:hover,
 .rose-node.active{
     box-shadow:0 0 35px #00cfff;
     filter:brightness(1.15);
+    animation:pulseRose 0.8s infinite;
 }
 
 .rose-icon{
