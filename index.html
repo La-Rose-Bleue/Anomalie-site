@@ -503,14 +503,16 @@ setInterval(() => {
 }, 500);
 
     document.getElementById("playBtn").onclick = () => {
+    musique.volume = document.getElementById("volumeSlider").value / 100;
     musique.play();
+    localStorage.setItem("musiqueAnomalie", "active");
 };
 
 document.getElementById("pauseBtn").onclick = () => {
     musique.pause();
 };
 
-document.getElementById("volumeSlider").oninput = function () {
+    document.getElementById("volumeSlider").oninput = function () {
     musique.volume = this.value / 100;
     localStorage.setItem("volumeAnomalie", this.value);
 };
