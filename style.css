@@ -690,6 +690,17 @@ footer {
     color:#dff6ff;
 }
 
+.clique-rose-banner{
+    text-align:center;
+    margin:20px 0 30px;
+}
+
+.clique-rose-banner img{
+    width:100%;
+    max-width:1600px;
+    height:auto;
+}
+
 .rose-orbite{
     position:relative;
     width:660px;
