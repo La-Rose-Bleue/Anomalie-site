@@ -483,8 +483,11 @@ function reprendreTemps() {
 }
 
 function lancerMusique() {
-    musique.volume = 0.3;
+    const volumeActuel = document.getElementById("volumeSlider").value;
+    musique.volume = volumeActuel / 100;
+
     reprendreTemps();
+
     musique.play().then(() => {
         localStorage.setItem("musiqueAnomalie", "active");
     }).catch(() => {});
