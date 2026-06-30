@@ -457,6 +457,11 @@ document.addEventListener("click", () => {
     musique.play();
   
   localStorage.setItem("musiqueAnomalie", "active");
+
+setInterval(() => {
+    localStorage.setItem("tempsMusiqueAnomalie", musique.currentTime);
+}, 500);
+  
 }, { once: true });
     
       for (let i = 0; i < 34; i++) {
