@@ -444,8 +444,20 @@ nav a:hover::after {
     UNE FOI... UNE DESTINÉE... POUR L'ÉTERNITÉ.
   </footer>
 
+<audio id="musiqueAccueil" loop>
+    <source src="blueroseacceuil.mp3" type="audio/mpeg">
+</audio>
+  
   <script>
-    for (let i = 0; i < 34; i++) {
+  
+const musique = document.getElementById("musiqueAccueil");
+
+document.addEventListener("click", () => {
+    musique.volume = 0.3;
+    musique.play();
+}, { once: true });
+    
+      for (let i = 0; i < 34; i++) {
       const petal = document.createElement("div");
       petal.className = "petal";
       petal.style.left = Math.random() * 100 + "vw";
