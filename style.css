@@ -709,6 +709,7 @@ footer {
     width:660px;
     height:660px;
     margin:140px auto 80px;
+    margin-top: -120px;
     border-radius:50%;
     background:radial-gradient(circle, rgba(0,180,255,.25), rgba(0,0,40,.35) 45%, transparent 70%);
     border:1px solid rgba(0,200,255,.35);
