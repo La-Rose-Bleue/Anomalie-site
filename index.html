@@ -455,6 +455,8 @@ const musique = document.getElementById("musiqueAccueil");
 document.addEventListener("click", () => {
     musique.volume = 0.3;
     musique.play();
+  
+  localStorage.setItem("musiqueAnomalie", "active");
 }, { once: true });
     
       for (let i = 0; i < 34; i++) {
