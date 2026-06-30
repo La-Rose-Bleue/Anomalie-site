@@ -720,8 +720,12 @@ footer {
 
 .rose-node{
     position:absolute;
+    top:50%;
+    left:50%;
     width:80px;
     height:80px;
+    margin-left:-40px;
+    margin-top:-40px;
     border-radius:50%;
     border:2px solid rgba(120,220,255,.8);
     background:rgba(0,10,35,.85);
@@ -793,14 +797,16 @@ footer {
     margin-top:-40px;
 }
 
-.node-1{ transform:rotate(0deg) translateY(-330px) rotate(0deg); }
-.node-2{ transform:rotate(45deg) translateY(-330px) rotate(-45deg); }
-.node-3{ transform:rotate(90deg) translateY(-330px) rotate(-90deg); }
-.node-4{ transform:rotate(135deg) translateY(-330px) rotate(-135deg); }
-.node-5{ transform:rotate(180deg) translateY(-330px) rotate(-180deg); }
-.node-6{ transform:rotate(225deg) translateY(-330px) rotate(-225deg); }
-.node-7{ transform:rotate(270deg) translateY(-330px) rotate(-270deg); }
-.node-8{ transform:rotate(315deg) translateY(-330px) rotate(-315deg); }
+.minallia-node{ transform:rotate(0deg) translateY(-330px) rotate(0deg); }
+
+.node-1{ transform:rotate(40deg) translateY(-330px) rotate(-40deg); }
+.node-2{ transform:rotate(80deg) translateY(-330px) rotate(-80deg); }
+.node-3{ transform:rotate(120deg) translateY(-330px) rotate(-120deg); }
+.node-4{ transform:rotate(160deg) translateY(-330px) rotate(-160deg); }
+.node-5{ transform:rotate(200deg) translateY(-330px) rotate(-200deg); }
+.node-6{ transform:rotate(240deg) translateY(-330px) rotate(-240deg); }
+.node-7{ transform:rotate(280deg) translateY(-330px) rotate(-280deg); }
+.node-8{ transform:rotate(320deg) translateY(-330px) rotate(-320deg); }
 
 .rose-multi{ color:#ff66ff; }
 .rose-tenebres{ color:#8a3cff; }
