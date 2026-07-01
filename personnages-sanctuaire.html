@@ -136,10 +136,10 @@ document.querySelectorAll(".rose-node").forEach(rose => {
 
 });
 
-fermer.addEventListener("click", () => {
-
-    fiche.classList.remove("active");
-
+document.addEventListener("click", function(e) {
+    if (e.target.id === "fermerFiche") {
+        fiche.classList.remove("active");
+    }
 });
 
 </script>
