@@ -887,6 +887,7 @@ footer {
     to{
         transform: rotate(360deg);
     }
+}
 
 /* ===============================
    LECTEUR - MUSIQUE
@@ -962,12 +963,9 @@ footer {
    FICHE PERSO - SANCTUAIRE
 ================================ */
 
-.fiche-cachee {
-    display: none;
-}
-
-#fiche-personnage {
-    position: fixed;
+#fiche-personnage{
+    display:none;
+    position:fixed;
     top: 50%;
     right: 40px;
     transform: translateY(-50%);
