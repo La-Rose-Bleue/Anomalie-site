@@ -957,3 +957,50 @@ footer {
 #audioControls input {
     width: 70px;
 }
+
+/* ===============================
+   FICHE PERSO - SANCTUAIRE
+================================ */
+
+.fiche-cachee {
+    display: none;
+}
+
+#fiche-personnage {
+    position: fixed;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    width: 360px;
+    min-height: 460px;
+    background: rgba(3, 8, 30, 0.92);
+    border: 2px solid #4fdfff;
+    border-radius: 18px;
+    box-shadow: 0 0 35px #00bfff;
+    z-index: 9999;
+    padding: 30px;
+    color: white;
+}
+
+#fiche-personnage.active {
+    display: block;
+}
+
+.fermer-fiche {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: transparent;
+    border: 1px solid #4fdfff;
+    color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.fermer-fiche:hover {
+    background: #4fdfff;
+    color: #001020;
+}
