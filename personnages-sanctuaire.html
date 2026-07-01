@@ -99,8 +99,50 @@ initial-scale=1.0">
 
 </div>
 
+    <div id="fiche-personnage" class="fiche-cachee">
+
+    <button id="fermerFiche" class="fermer-fiche">
+        ✕
+    </button>
+
+    <div id="contenuFiche">
+
+    </div>
+
+</div>
+
     <a href="personnages.html" class="btn-retour">← Retour aux personnages</a>
 
 </section>
+
+<script>
+
+const fiche = document.getElementById("fiche-personnage");
+const contenu = document.getElementById("contenuFiche");
+const fermer = document.getElementById("fermerFiche");
+
+document.querySelectorAll(".rose-node").forEach(rose => {
+
+    rose.addEventListener("click", () => {
+
+        fiche.classList.add("active");
+
+        contenu.innerHTML = `
+            <h2>${rose.dataset.fiche}</h2>
+            <p>Ici apparaîtra la fiche du personnage.</p>
+        `;
+
+    });
+
+});
+
+fermer.addEventListener("click", () => {
+
+    fiche.classList.remove("active");
+
+});
+
+</script>
+        
 </body>
 </html>
