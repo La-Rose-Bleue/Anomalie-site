@@ -491,7 +491,7 @@ const volumeSauvegarde = localStorage.getItem("volumeAnomalie") || 30;
 volumeSlider.value = volumeSauvegarde;
 musique.volume = volumeSauvegarde / 100;
 
-const tempsSauvegarde = localStorage.getItem("tempsMusiqueAnomalie");
+const tempsSauvegarde = sessionStorage.getItem("tempsMusiqueAnomalie");
 if (tempsSauvegarde) {
     musique.currentTime = parseFloat(tempsSauvegarde);
 }
@@ -513,7 +513,7 @@ volumeSlider.addEventListener("input", () => {
 
 setInterval(() => {
     if (!musique.paused) {
-        localStorage.setItem("tempsMusiqueAnomalie", musique.currentTime);
+        sessionStorage.setItem("tempsMusiqueAnomalie", musique.currentTime);
     }
 }, 500);
 
