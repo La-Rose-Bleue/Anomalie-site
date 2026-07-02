@@ -468,13 +468,13 @@ volumeSlider.value = volumeSauvegarde;
 musique.volume = volumeSauvegarde / 100;
 
 if (localStorage.getItem("musiqueAnomalie") === "active") {
-    const tempsSauvegarde = localStorage.getItem("tempsMusiqueAnomalie");
+    const tempsSauvegarde = sessionStorage.getItem("tempsMusiqueAnomalie");
     if (tempsSauvegarde) {
         musique.currentTime = parseFloat(tempsSauvegarde);
     }
 } else {
     musique.currentTime = 0;
-    localStorage.removeItem("tempsMusiqueAnomalie");
+    sessionStorage.removeItem("tempsMusiqueAnomalie");
 }
 
 playBtn.addEventListener("click", () => {
@@ -494,7 +494,7 @@ volumeSlider.addEventListener("input", () => {
 
 setInterval(() => {
     if (!musique.paused) {
-        localStorage.setItem("tempsMusiqueAnomalie", musique.currentTime);
+        sessionStorage.setItem("tempsMusiqueAnomalie", musique.currentTime);
     }
 }, 500);
 
